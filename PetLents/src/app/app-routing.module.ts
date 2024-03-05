@@ -5,14 +5,15 @@ import { ApointmentListComponent } from './apointment-list/apointment-list.compo
 import { ApointmentEditComponent } from './apointment-edit/apointment-edit.component';
 import { ApointmentDetailComponent } from './apointment-detail/apointment-detail.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { AuthGuard } from './Guard/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
-  { path: 'register', component: ApointmentRegistrationComponent },
-  { path: 'list', component: ApointmentListComponent },
-  { path: 'edit/:id', component: ApointmentEditComponent },
-  { path: 'detail/:id', component: ApointmentDetailComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: 'register', canActivate: [AuthGuard], component: ApointmentRegistrationComponent },
+  { path: 'list', canActivate: [AuthGuard], component: ApointmentListComponent },
+  { path: 'edit/:id', canActivate: [AuthGuard], component: ApointmentEditComponent },
+  { path: 'detail/:id', canActivate: [AuthGuard], component: ApointmentDetailComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
