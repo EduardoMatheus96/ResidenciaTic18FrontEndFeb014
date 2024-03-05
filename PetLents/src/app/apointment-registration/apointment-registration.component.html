@@ -1,0 +1,7 @@
+<form (ngSubmit)="registerAppointment()">
+  <input [(ngModel)]="appointment.nome" name="nome" placeholder="Nome do Pet">
+  <input [(ngModel)]="appointment.data" type="date" name="data" placeholder="Data do Atendimento">
+  <textarea [(ngModel)]="appointment.detalhes" name="detalhes" placeholder="Detalhes do Atendimento"></textarea>
+
+  <button type="submit">Registrar Atendimento</button>
+</form>

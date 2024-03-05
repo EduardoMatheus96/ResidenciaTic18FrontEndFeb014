@@ -1,0 +1,6 @@
+<form (ngSubmit)="saveAppointment()">
+  <input [(ngModel)]="appointment.nome" name="nome">
+  <input [(ngModel)]="appointment.data" type="date" name="data">
+  <textarea [(ngModel)]="appointment.detalhes" name="detalhes" placeholder="Detalhes do Atendimento"></textarea>
+  <button type="submit">Salvar Atendimento</button>
+</form>
