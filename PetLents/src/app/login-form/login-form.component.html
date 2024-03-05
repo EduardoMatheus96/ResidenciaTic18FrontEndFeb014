@@ -28,8 +28,8 @@
                       required>
           </div>
           <div>
-              <button class="btn btn-primary" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' : 'inscrever-se'}}</button>|
-              <button class="btn btn-primary" (click)="onTrocarModo()" type="button">{{ modoLogin ? 'inscrever-se': 'Login' }}</button>
+              <button class="btn btn-primary" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Entrar' : 'inscrever-se'}}</button> <br>
+              <button class="btn btn-primary" (click)="onTrocarModo()" type="button">{{ modoLogin ? 'inscrever-se': 'Entrar' }}</button>
           </div>
       </form>
   </div>

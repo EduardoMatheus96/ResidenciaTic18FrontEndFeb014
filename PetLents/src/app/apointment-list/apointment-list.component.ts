@@ -19,4 +19,6 @@ export class ApointmentListComponent implements OnInit{
       this.appointments = appointments;
     });
   }
+
 }
+
