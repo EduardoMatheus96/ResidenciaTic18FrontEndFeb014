@@ -1,0 +1,52 @@
+$cor-botao: #4CAF50;
+$cor-hover: #45a049;
+
+$form-background: #f2f2f2;
+$font-color: #4CAF50;
+
+.row {
+  background-image: url("../../assets/background_petshop.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: $form-background;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
+
+  input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid $font-color;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: $font-color;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .container {
+    padding: 16px;
+  }
+}
+
+
